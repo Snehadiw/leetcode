@@ -7,22 +7,22 @@ class Solution(object):
         :type n: int
         :rtype: None Do not return anything, modify nums1 in-place instead.
         """
-        res = []
+        arr = []
         i, j = 0, 0
         while(i < m and j < n):
             if nums1[i] < nums2[j]:
-                res.append(nums1[i])
+                arr.append(nums1[i])
                 i+=1
             else:
-                res.append(nums2[j])
+                arr.append(nums2[j])
                 j+=1
         while(i < m):
-            res.append(nums1[i])
+            arr.append(nums1[i])
             i+=1
         while(j < n):
-            res.append(nums2[j])
+            arr.append(nums2[j])
             j+=1
-        for i,e in enumerate(res):
+        for i,e in enumerate(arr):
             nums1[i] = e
         
         
